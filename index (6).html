@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday, My Sweetheart! 💕</title>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Dancing+Script:wght@700&family=Playfair+Display:ital,wght@0,700;1,500&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--W:320px;--H:480px}
+button,input{font-family:inherit}
+body{font-family:'Quicksand',sans-serif;color:#6b3a4e;min-height:100vh;min-height:100dvh;display:flex;justify-content:center;align-items:center;overflow-x:hidden;background:radial-gradient(circle at 50% 0,#fff6f9 0,transparent 55%),radial-gradient(circle at 50% 100%,#ffc2d6 0,transparent 60%),#ffdde9}
+.hb{position:fixed;bottom:-50px;color:#ff6f9d;pointer-events:none;z-index:1;animation:rise linear infinite,sway ease-in-out infinite alternate}
+.hb.fa{bottom:auto;top:-50px;animation-name:fall,sway}
+@keyframes rise{from{translate:0 0}to{translate:0 -125vh}}
+@keyframes fall{from{translate:0 0}to{translate:0 125vh}}
+@keyframes sway{from{transform:translateX(-14px) rotate(-18deg)}to{transform:translateX(14px) rotate(18deg)}}
+.tw{position:fixed;color:#fff;pointer-events:none;z-index:1;text-shadow:0 0 8px #ff9ec4;animation:twk ease-in-out infinite alternate}
+@keyframes twk{from{opacity:.1;transform:scale(.6)}to{opacity:.9;transform:scale(1.2)}}
+#dots{position:fixed;right:10px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:9px;z-index:20}
+#dots i{width:6px;height:6px;border-radius:50%;background:rgba(236,75,134,.3);transition:.3s}
+#dots i.on{height:14px;background:#ec4b86;box-shadow:0 0 8px #ec4b86}
+.wrap{width:100%;max-width:440px;padding:24px 20px;text-align:center;position:relative;z-index:10}
+.stage{animation:in .9s cubic-bezier(.22,1,.36,1) backwards;transition:opacity .35s ease,transform .35s ease}
+.stage.out{opacity:0;transform:translateY(-12px) scale(.98);pointer-events:none}
+@keyframes in{from{opacity:0;transform:translateY(24px) scale(.97);filter:blur(4px)}}
+.hidden{display:none!important}
+h2{font:700 2rem 'Playfair Display',serif;background:linear-gradient(90deg,#e8407f,#f472a6);-webkit-background-clip:text;background-clip:text;color:transparent;margin-bottom:10px}
+.hint{font-size:.85rem;font-weight:500;line-height:1.5;max-width:300px;margin:0 auto 22px}
+.btn{border:0;color:#fff;font-weight:700;font-size:.92rem;padding:12px 28px;border-radius:30px;background:linear-gradient(135deg,#f0427f,#d81b60);box-shadow:0 8px 20px rgba(216,27,96,.35);cursor:pointer;margin-top:22px;transition:transform .3s cubic-bezier(.22,1,.36,1),box-shadow .3s}
+.btn:hover{transform:translateY(-3px);box-shadow:0 12px 26px rgba(216,27,96,.42)}
+.btn:active{transform:scale(.96)}
+.btn.sm{padding:9px 20px;font-size:.78rem;margin-top:12px}
+/* amplop */
+.env{position:relative;width:280px;height:180px;margin:190px auto 0;cursor:pointer;filter:drop-shadow(0 14px 22px rgba(216,27,96,.2))}
+.env>*{position:absolute}
+.eb{inset:0;border-radius:12px;background:linear-gradient(160deg,#ff9fc0,#f2709c)}
+.ef{inset:0;border-radius:12px;background:linear-gradient(160deg,#ffb0cb,#f78cb0);clip-path:polygon(0 0,50% 56%,100% 0,100% 100%,0 100%);z-index:2}
+.fl2{inset:0;background:linear-gradient(#f77ca4,#ee6694);clip-path:polygon(0 0,100% 0,50% 56%);transform-origin:50% 0;transition:transform .6s,background .6s;z-index:4}
+.env.open .fl2{transform:rotateX(180deg);z-index:0;background:#ff94b6}
+.seal{left:calc(50% - 24px);top:74px;width:48px;height:48px;display:grid;place-items:center;font-size:3rem;line-height:1;background:linear-gradient(145deg,#ffb0cb,#ec407a);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 4px 5px rgba(200,30,90,.4));z-index:5;pointer-events:none;animation:hbt3 1.6s ease-in-out infinite}
+@keyframes hbt3{50%{transform:scale(1.12)}}
+.ec{left:15px;bottom:70px;width:250px;padding:20px 14px 46px;background:linear-gradient(#ffe9f0,#ffd6e3);border-radius:22px;z-index:1;opacity:0;pointer-events:none;transform:translateY(60px);transition:transform .8s .35s cubic-bezier(.3,1.15,.5,1),opacity .4s .35s;box-shadow:0 8px 22px rgba(236,75,134,.2)}
+.env.open .ec{transform:none;opacity:1}
+.bl{position:absolute;top:-58px;left:0;right:0;font-size:2.2rem;z-index:2;display:flex;justify-content:center;align-items:flex-end;gap:2px}
+.bl span{display:inline-block;transform-origin:50% 100%}
+.ct{width:104px;height:auto;overflow:visible;transform-origin:50% 100%;animation:cat 1.8s ease-in-out infinite}
+.arm{transform-origin:102px 82px;animation:wave .7s ease-in-out infinite alternate}
+@keyframes wave{from{transform:rotate(-14deg)}to{transform:rotate(24deg)}}
+.ey{transform-box:fill-box;transform-origin:center;animation:blk 3.5s infinite}
+@keyframes blk{0%,94%,100%{transform:scaleY(1)}97%{transform:scaleY(.1)}}
+.bo{animation:sway 2.4s ease-in-out infinite alternate}
+.b2{animation-delay:-1.2s}
+@keyframes cat{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+@keyframes sway{from{transform:rotate(-10deg) translateY(0)}to{transform:rotate(10deg) translateY(-6px)}}
+.cd{display:flex;justify-content:space-between;align-items:center;font-size:1.15rem;height:24px}
+.wd,.cg{display:grid;grid-template-columns:repeat(7,1fr);gap:4px 3px}
+.wd{margin-top:6px}
+.wd b{font-size:.5rem;font-weight:700;color:#fff;background:#f7a1bd;border-radius:10px;padding:3px 0}
+.wd b:first-child,.wd b:last-child{background:#ec407a}
+.cg{margin-top:8px}
+.cg i{font-style:normal;font-size:.72rem;font-weight:700;color:#3d2431;line-height:22px;position:relative;z-index:0}
+.cg .su{color:#e8407f}
+.cg .hl{color:#fff}
+.cg .hl:before{content:'♥';position:absolute;left:50%;top:50%;font-size:30px;line-height:1;color:#ec4b86;z-index:-1;transform:translate(-50%,-52%);animation:hbt2 1.2s ease-in-out infinite;filter:drop-shadow(0 2px 3px rgba(236,75,134,.4))}
+@keyframes hbt2{50%{transform:translate(-50%,-52%) scale(1.15)}}
+.mo{font:700 1.7rem 'Dancing Script',cursive;color:#e8407f;margin-top:6px;line-height:1.2}
+.mo small{font-size:1rem;margin-left:4px}
+.ew{margin:30px auto 0;max-width:320px;animation:in .8s cubic-bezier(.22,1,.36,1) backwards}
+.ew h3{font:700 1.6rem/1.25 'Playfair Display',serif;color:#e8407f}
+.ew em{display:block;font-weight:500;color:#4a2a3a}
+.ew p{font-size:.82rem;line-height:1.55;margin-top:8px}
+.ew .btn{margin-top:14px}
+/* diary */
+.bw{width:var(--W);margin:0 auto;perspective:1400px;animation:fl2 3.6s ease-in-out infinite}
+@keyframes fl2{50%{transform:translateY(-6px)}}
+.book{width:var(--W);height:var(--H);position:relative;transform-style:preserve-3d;transform:scale(1) translateX(0) rotateX(4deg) rotateY(20deg);transition:transform 1.3s cubic-bezier(.22,1,.36,1);cursor:pointer}
+.book.open{transform:scale(var(--sc,1)) translateX(calc(var(--W)/2)) rotateX(0) rotateY(0);cursor:default}
+.sp{position:absolute;left:0;top:0;width:28px;height:100%;transform-origin:left;transform:rotateY(90deg);background:linear-gradient(90deg,#7a0b34,#c2185b 50%,#8e0e3d);border-radius:4px}
+.pg{position:absolute;inset:0;transform:translateZ(-2px);background:repeating-linear-gradient(transparent 0 calc(1.35em - 1px),#f3dfe5 calc(1.35em - 1px) 1.35em) 0 .9em,#fffdf8;border-radius:6px 16px 16px 6px;padding:24px 20px 34px 28px;font-size:1.4rem;text-align:left;font-family:'Caveat',cursive;box-shadow:inset 9px 0 10px -8px rgba(0,0,0,.2),1px 1px 0 #f3d6e0,2px 2px 0 #fff,3px 3px 0 #ecc9d6,4px 4px 0 #fff,5px 5px 0 #e3bccb,0 22px 34px rgba(120,20,60,.28);overflow:hidden}
+.cv{position:absolute;inset:0;transform-style:preserve-3d;transform-origin:left;transition:transform 1.4s cubic-bezier(.45,0,.2,1)}
+.cf,.cb{position:absolute;inset:0;border-radius:6px 16px 16px 6px;backface-visibility:hidden;-webkit-backface-visibility:hidden}
+.cf{background:radial-gradient(rgba(255,255,255,.14) 1px,transparent 1.5px) 0 0/10px 10px,linear-gradient(135deg,#e91e63,#b0124f);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding-left:16px;box-shadow:1px 1px 0 #a10f45,2px 2px 0 #a10f45,3px 3px 0 #8e0e3d,4px 4px 0 #8e0e3d,0 22px 34px rgba(120,20,60,.3)}
+.cf:before{content:'';position:absolute;inset:14px 14px 14px 30px;border:1px solid rgba(255,214,140,.65);border-radius:12px}
+.cf:after{content:'';position:absolute;inset:0;border-radius:inherit;pointer-events:none;background:linear-gradient(105deg,rgba(255,255,255,.28),transparent 35%,transparent 70%,rgba(0,0,0,.12))}
+.cf i{position:absolute;left:0;top:0;bottom:0;width:18px;border-radius:6px 0 0 6px;background:linear-gradient(90deg,#8e0e3d,#c2185b)}
+.cf b{font:700 1.3rem 'Playfair Display',serif}
+.cf span{font-size:2rem}
+.cf small{font-size:.62rem;letter-spacing:1.5px;opacity:.9}
+.cb{transform:rotateY(180deg);background:repeating-linear-gradient(transparent 0 calc(1.35em - 1px),#f3dfe5 calc(1.35em - 1px) 1.35em) 0 .9em,#fffdf8;border-radius:16px 6px 6px 16px;padding:24px 28px 34px 20px;font-size:1.4rem;overflow:hidden;text-align:left;font-family:'Caveat',cursive;box-shadow:inset -9px 0 10px -8px rgba(0,0,0,.2),-1px 1px 0 #f3d6e0,-2px 2px 0 #fff,-3px 3px 0 #ecc9d6,-4px 4px 0 #fff,-5px 5px 0 #e3bccb,0 22px 34px rgba(120,20,60,.28)}
+.book.open .cv{transform:rotateY(-180deg);pointer-events:none}
+.pg h3{font-size:1.7rem;line-height:30px;color:#e8407f}
+.pg p{font-size:1.08rem;line-height:26px;color:#3d2431}
+.pg p+p{margin-top:12px}
+.sig{text-align:right;font-size:1.15em;color:#e8407f;margin-top:.5em}
+.pg h3,.cb h3{font-size:1.3em;line-height:1.35em;color:#e8407f;margin-bottom:.2em}
+.pg p,.cb p{font-size:1em;line-height:1.35em;color:#3d2431}
+.pn{position:absolute;bottom:10px;left:0;right:0;text-align:center;font-size:1.1rem;color:#d98aa8}
+.pg h3,.cb h3,.pg p,.cb p,.sig{position:relative;z-index:1}
+.pg:before,.cb:before{content:'';position:absolute;top:8px;width:76px;height:20px;background:repeating-linear-gradient(45deg,rgba(255,170,200,.85) 0 6px,rgba(255,255,255,.8) 6px 12px);box-shadow:0 1px 3px rgba(0,0,0,.15);z-index:2}
+.cb:before{left:-16px;transform:rotate(-35deg)}
+.pg:before{right:-16px;transform:rotate(35deg)}
+.pg:after,.cb:after{content:'';position:absolute;inset:8px;border:1.5px dashed rgba(236,75,134,.28);border-radius:10px;pointer-events:none}
+.dc{position:absolute;font-size:1.3rem;line-height:1;z-index:2;pointer-events:none;animation:wg 3s ease-in-out infinite alternate}
+.dc:nth-of-type(2){animation-delay:-1s}.dc:nth-of-type(3){animation-delay:-2s}
+@keyframes wg{from{transform:rotate(-8deg) scale(1)}to{transform:rotate(8deg) scale(1.12)}}
+.dc.wm{left:50%;top:50%;font-size:9rem;color:#ffc2d6;opacity:.2;z-index:0;animation:none;transform:translate(-50%,-50%)}
+/* foto */
+.stack{position:relative;width:270px;height:340px;margin:10px auto 0;touch-action:none}
+.pol{position:absolute;inset:0;background:#fff;padding:12px 12px 16px;border-radius:6px;box-shadow:0 10px 24px rgba(0,0,0,.15);cursor:grab;user-select:none}
+.pol:before{content:'';position:absolute;top:-10px;left:50%;width:70px;height:22px;margin-left:-35px;transform:rotate(-3deg);background:rgba(255,170,200,.7)}
+.pol img{width:100%;height:240px;object-fit:cover;border-radius:3px;pointer-events:none;display:block}
+.pol div{font:600 1.5rem Caveat,cursive;color:#e8407f;margin-top:14px}
+/* kue */
+.cake{width:260px;height:240px;display:block;margin:0 auto;overflow:visible}
+.fl{transform-origin:center;animation:fk .5s infinite alternate}
+@keyframes fk{to{transform:scale(1.15,1.2)}}
+.done .fl{display:none}
+.track{position:relative;width:250px;height:44px;margin:14px auto 0;border:1.5px dashed #ec4b86;border-radius:14px;background:rgba(255,255,255,.55);display:grid;place-items:center;font-size:.78rem;font-weight:700;color:#e8407f}
+.track input{position:absolute;inset:0;width:100%;height:100%;margin:0;background:transparent;-webkit-appearance:none;appearance:none;cursor:pointer}
+.track input::-webkit-slider-thumb{-webkit-appearance:none;width:38px;height:42px;border-radius:12px;background:linear-gradient(135deg,#f0427f,#d81b60);border:2px solid #fff;box-shadow:0 3px 8px rgba(216,27,96,.4)}
+.track input::-moz-range-thumb{width:34px;height:38px;border-radius:12px;background:#e8407f;border:2px solid #fff}
+/* gelembung */
+.bx{position:relative;height:210px;border:1.5px dashed rgba(236,75,134,.5);border-radius:22px;background:rgba(255,255,255,.35);backdrop-filter:blur(6px);overflow:hidden}
+.bb{position:absolute;padding:9px 18px;border-radius:22px;font-weight:700;font-size:.78rem;color:#4a2a3a;background:linear-gradient(180deg,#fff 40%,#ffd3e2);box-shadow:inset 0 -4px 6px rgba(255,150,190,.5),0 6px 12px rgba(236,75,134,.25);cursor:pointer;white-space:nowrap;animation:flo 3.5s ease-in-out infinite alternate;transition:transform .3s,opacity .3s}
+@keyframes flo{to{transform:translate(6px,-10px)}}
+.bb.popped{animation:none;transform:scale(0);opacity:0;pointer-events:none}
+.wc{margin:14px auto 0;background:#fff;border-radius:18px;padding:12px 16px;min-height:88px;display:flex;flex-direction:column;justify-content:center;font:600 1.2rem/1.35 Caveat,cursive;color:#5a2540;box-shadow:0 10px 24px rgba(236,75,134,.15)}
+.fin{font:700 1.45rem 'Playfair Display',serif;color:#e8407f;margin-top:18px}
+.sub{font-size:.62rem;letter-spacing:2px;font-weight:600;margin-top:4px}
+/* kado */
+.gift{position:relative;width:200px;margin:20px auto 0;cursor:pointer;animation:bn 2.4s infinite}
+@keyframes bn{40%{transform:translateY(-14px)}60%{transform:translateY(-6px)}}
+.gift svg{width:100%;overflow:visible;filter:drop-shadow(0 18px 20px rgba(216,27,96,.25))}
+#lid{transition:transform .5s;transform-box:fill-box;transform-origin:center}
+#lid.up{transform:translateY(-36px) rotate(-10deg)}
+.tag{position:absolute;left:-6px;top:6px;background:#ffe27a;color:#7a5200;font-size:.68rem;font-weight:700;padding:3px 9px;border-radius:4px;transform:rotate(-8deg);box-shadow:0 3px 6px rgba(0,0,0,.15)}
+/* partikel & modal */
+.pt{position:fixed;z-index:200;pointer-events:none;color:#ff5c93;animation:pt 1.1s ease-out forwards}
+@keyframes pt{to{transform:translate(var(--dx),var(--dy)) rotate(240deg);opacity:0}}
+.ov{position:fixed;inset:0;background:rgba(80,10,40,.45);backdrop-filter:blur(3px);display:flex;justify-content:center;align-items:center;z-index:100}
+.mc{background:#fff;padding:30px 22px;border-radius:24px;max-width:330px;width:90%;text-align:center;box-shadow:0 14px 40px rgba(0,0,0,.25);animation:pop .4s ease-out}
+@keyframes pop{from{transform:scale(.7);opacity:0}}
+.mc h3{font:700 1.5rem 'Playfair Display',serif;color:#e8407f;margin:8px 0 10px}
+.mc p{font-size:.88rem;line-height:1.6;color:#6b3a4e}
+#fw{position:fixed;inset:0;width:100%;height:100%;z-index:150;pointer-events:none}
+#hl,#hr,#cutl{transition:transform .15s ease-out}
+</style>
+</head>
+<body>
+<audio id="bgm" loop><source src="https://assets.mixkit.co/music/preview/mixkit-romantic-sunflower-263.mp3" type="audio/mpeg"></audio>
+<div id="hearts"></div>
+<div id="dots"></div>
+<canvas id="fw"></canvas>
+
+<div class="wrap">
+  <!-- STAGE 1 -->
+  <div class="stage" id="stage-1">
+    <div class="env" id="env" onclick="toggleEnv()">
+      <div class="eb"></div>
+      <div class="ec">
+        <div class="bl"><span class="bo">🎈</span><svg class="ct" viewBox="0 0 125 92">
+<ellipse cx="55" cy="84" rx="26" ry="14" fill="#fff" stroke="#f2a7c0" stroke-width="2"/>
+<path d="M24 34 L28 8 L48 24Z M86 34 L82 8 L62 24Z" fill="#fff" stroke="#f2a7c0" stroke-width="2" stroke-linejoin="round"/>
+<path d="M30 26 L31 15 L40 23Z M80 26 L79 15 L70 23Z" fill="#ffc2d6"/>
+<ellipse cx="55" cy="52" rx="33" ry="27" fill="#fff" stroke="#f2a7c0" stroke-width="2"/>
+<circle class="ey" cx="43" cy="50" r="3.2" fill="#4a2a3a"/><circle class="ey" cx="67" cy="50" r="3.2" fill="#4a2a3a"/>
+<ellipse cx="36" cy="58" rx="5" ry="3" fill="#ffb3cb" opacity=".7"/><ellipse cx="74" cy="58" rx="5" ry="3" fill="#ffb3cb" opacity=".7"/>
+<path d="M52 56 L58 56 L55 60Z" fill="#f2749c"/>
+<path d="M55 60 q-4 5 -8 2 M55 60 q4 5 8 2" fill="none" stroke="#4a2a3a" stroke-width="1.6" stroke-linecap="round"/>
+<path d="M30 54 l-14 -3 M30 58 l-14 3 M80 54 l10 -3 M80 58 l10 3" stroke="#c9879f" stroke-width="1.4" stroke-linecap="round"/>
+<ellipse cx="42" cy="88" rx="9" ry="6" fill="#fff" stroke="#f2a7c0" stroke-width="2"/>
+<g class="arm"><rect x="96" y="36" width="13" height="46" rx="6.5" fill="#fff" stroke="#f2a7c0" stroke-width="2"/><circle cx="102.5" cy="46" r="3.5" fill="#ffb3cb"/></g>
+</svg><span class="bo b2">🎈</span></div>
+        <div class="cd"><span>💗</span><span>🎀</span></div>
+        <div class="wd"><b>Sun</b><b>Mon</b><b>Tue</b><b>Wed</b><b>Thu</b><b>Fri</b><b>Sat</b></div>
+        <div class="cg" id="cg"></div>
+        <div class="mo">November<small>♡</small></div>
+      </div>
+      <div class="ef"></div><div class="fl2"></div><div class="seal">♥&#xFE0E;</div>
+    </div>
+    <p class="hint" id="eh" style="margin:34px auto 0">Ketuk hati untuk membuka undangan... ✨</p>
+    <div class="ew hidden" id="ew">
+      <h3>Happy Birthday,<em>Maryam Khalid Abdullah Al Ghamdi</em></h3>
+      <p>Aku sudah menyiapkan sesuatu yang spesial untuk kamu, tekan tombol di bawah untuk memulai ✨</p>
+      <button class="btn" onclick="go(2,event)">Mulai Kejutan →</button>
+    </div>
+  </div>
+
+  <!-- STAGE 2 -->
+  <div class="stage hidden" id="stage-2">
+    <h2>My Secret Diary</h2>
+    <p class="hint" id="dh">Ketuk buku untuk memutar kuncinya &amp; membacanya 🔑</p>
+    <div class="bw"><div class="book" id="book" onclick="openBook()"><div class="sp"></div>
+      <div class="pg"><span class="dc wm">♥&#xFE0E;</span><span class="dc" style="top:12px;left:34px">🌷</span><span class="dc" style="bottom:12px;left:34px">💗</span><span class="dc" style="bottom:12px;right:18px">🐾</span><p>Di hari spesialmu ini, aku ingin kamu tahu betapa berartinya kehadiranmu. Kamu adalah orang favoritku di seluruh dunia.</p><div class="sig">Love always, ♡</div><div class="pn">2</div></div>
+      <div class="cv"><div class="cf"><i></i><b>My Secret Diary</b><span id="lock">🔒</span><small>TAP TO UNLOCK &amp; OPEN</small></div><div class="cb"><span class="dc wm">♥&#xFE0E;</span><span class="dc" style="top:12px;right:18px">🌸</span><span class="dc" style="bottom:12px;left:18px">🍓</span><span class="dc" style="bottom:12px;right:20px">✨</span><h3>Dearest Love,</h3><p>Setiap momen bersamamu terasa seperti mimpi yang paling indah. Kamu adalah segalanya bagiku — tawa, kehangatan, dan semua warna di hariku. di 18 tahun ini kamu harus lebih dewasa lagi dan lebih rajin lagi belajar capai kesuksesan dan aku harap kamu panjang umur selalu dimudahkan rezeki aku harap kita selalu bersama selamanya</p><div class="pn">1</div></div></div>
+    </div></div>
+    <button class="btn hidden" id="bn" onclick="go(3)">See Our Memories →</button>
+  </div>
+
+  <!-- STAGE 3 -->
+  <div class="stage hidden" id="stage-3">
+    <h2>Our Memories</h2>
+    <p class="hint">Tarik &amp; lemparkan tumpukan foto untuk melihat! 📸</p>
+    <div class="stack" id="stack">
+      <div class="pol"><img data-n="foto-kita1" alt="Memory"><div>baba lagi senyum sama kamu ✨</div></div>
+      <div class="pol"><img data-n="foto-kita2" alt="Memory"><div>lucu kan hihihi 💕</div></div>
+      <div class="pol"><img data-n="foto-kita3" alt="Memory"><div>Sayyangg bangget sama kamuu! 🎂</div></div>
+      <div class="pol"><img data-n="foto-kita4" alt="Memory"><div>Bersamamu Selalu 🥰</div></div>
+      <div class="pol"><img data-n="foto-kita5" alt="Memory"><div>Cinta Sepanjang Masa 💖</div></div>
+    </div>
+    <button class="btn" onclick="go(4)">Time for Cake! →</button>
+  </div>
+
+  <!-- STAGE 4 -->
+  <div class="stage hidden" id="stage-4">
+    <h2 id="ct">Time for Cake!</h2>
+    <p class="hint" id="ch">Tarik pisau pemotong dari kiri ke kanan untuk membagi kuenya! 🍰</p>
+    <svg class="cake" id="cake" viewBox="0 0 200 200">
+      <defs>
+        <clipPath id="cl"><rect x="-20" y="0" width="120" height="200"/></clipPath>
+        <clipPath id="cr"><rect x="100" y="0" width="120" height="200"/></clipPath>
+        <g id="ck">
+          <ellipse cx="100" cy="186" rx="84" ry="9" fill="#e91e63" opacity=".18"/>
+          <rect x="22" y="122" width="156" height="56" rx="12" fill="#f4739f"/>
+          <rect x="22" y="122" width="156" height="12" rx="6" fill="#fff1f6"/>
+          <line x1="31.75" y1="134" x2="168.25" y2="134" stroke="#fff1f6" stroke-width="19.5" stroke-linecap="round" stroke-dasharray="0 19.5"/>
+          <rect x="46" y="86" width="108" height="38" rx="10" fill="#ec407a"/>
+          <rect x="46" y="86" width="108" height="10" rx="5" fill="#fff1f6"/>
+          <line x1="55" y1="96" x2="145" y2="96" stroke="#fff1f6" stroke-width="18" stroke-linecap="round" stroke-dasharray="0 18"/>
+          <rect x="68" y="54" width="64" height="34" rx="9" fill="#f78fb3"/>
+          <rect x="68" y="54" width="64" height="9" rx="4.5" fill="#fff1f6"/>
+          <line x1="76" y1="63" x2="124" y2="63" stroke="#fff1f6" stroke-width="16" stroke-linecap="round" stroke-dasharray="0 16"/>
+          <path d="M100 86c-9-7-12-10-12-14a6 6 0 0 1 12-2 6 6 0 0 1 12 2c0 4-3 7-12 14z" fill="#e91e63"/>
+          <rect x="84" y="36" width="7" height="18" rx="2" fill="#ffd54f"/>
+          <rect x="96.5" y="36" width="7" height="18" rx="2" fill="#a5e8d0"/>
+          <rect x="109" y="36" width="7" height="18" rx="2" fill="#f8a5c2"/>
+          <g class="fl" fill="#ffb300"><ellipse cx="87.5" cy="30" rx="4" ry="6"/><ellipse cx="100" cy="30" rx="4" ry="6"/><ellipse cx="112.5" cy="30" rx="4" ry="6"/></g>
+          <g fill="#ffd166"><circle cx="40" cy="152" r="2.5"/><circle cx="76" cy="160" r="2.5"/><circle cx="124" cy="152" r="2.5"/><circle cx="160" cy="160" r="2.5"/><circle cx="62" cy="108" r="2"/><circle cx="140" cy="108" r="2"/></g>
+        </g>
+      </defs>
+      <g clip-path="url(#cl)" id="hl"><use href="#ck"/></g>
+      <g clip-path="url(#cr)" id="hr"><use href="#ck"/></g>
+      <line id="cutl" x1="100" y1="24" x2="100" y2="184" stroke="#3b1d2b" stroke-width="2" stroke-dasharray="6 5" style="transform-origin:100px 24px;transform:scaleY(0)"/>
+    </svg>
+    <div class="track"><span>Geser untuk memotong kue!</span><input type="range" id="sl" min="0" max="100" value="0" oninput="cut(+this.value)" onchange="rel()"></div>
+  </div>
+
+  <!-- STAGE 5 -->
+  <div class="stage hidden" id="stage-5">
+    <h2>Floating Wishes</h2>
+    <p class="hint">Pecahkan gelembung sabun kaca 3D untuk mengabulkan harapanmu! 🫧</p>
+    <div class="bx" id="bx"></div>
+    <div class="wc" id="wish">Klik gelembung di atas untuk membaca doa... ✨</div>
+    <div class="fin">Happy Birthday, My Love ♥</div>
+    <div class="sub">FOREVER &amp; ALWAYS YOURS</div>
+    <button class="btn" onclick="go(6)">Open Your Gift →</button>
+  </div>
+
+  <!-- STAGE 6 -->
+  <div class="stage hidden" id="stage-6">
+    <h2>Satu Hal Lagi...</h2>
+    <p class="hint">Ketuk kotak kado premium untuk membuka hadiah spesialmu! 🎁</p>
+    <div class="gift" id="gift" onclick="openGift()">
+      <span class="tag">For You ✨</span>
+      <svg viewBox="0 0 160 150">
+        <ellipse cx="80" cy="140" rx="60" ry="8" fill="#e91e63" opacity=".2"/>
+        <rect x="20" y="62" width="120" height="76" rx="6" fill="#d81f3d"/>
+        <rect x="70" y="62" width="20" height="76" fill="#f5b82e"/>
+        <rect x="20" y="94" width="120" height="16" fill="#f5b82e"/>
+        <g fill="#fff" opacity=".8"><circle cx="38" cy="80" r="1.6"/><circle cx="118" cy="80" r="1.6"/><circle cx="38" cy="124" r="1.6"/><circle cx="118" cy="124" r="1.6"/></g>
+        <g id="lid">
+          <rect x="14" y="40" width="132" height="28" rx="6" fill="#e8274a"/>
+          <rect x="70" y="40" width="20" height="28" fill="#f5b82e"/>
+          <ellipse cx="62" cy="34" rx="16" ry="10" fill="none" stroke="#f5b82e" stroke-width="7" transform="rotate(-18 62 34)"/>
+          <ellipse cx="98" cy="34" rx="16" ry="10" fill="none" stroke="#f5b82e" stroke-width="7" transform="rotate(18 98 34)"/>
+          <circle cx="80" cy="38" r="7" fill="#f5b82e"/>
+        </g>
+      </svg>
+    </div>
+  </div>
+</div>
+
+<div class="ov hidden" id="modal">
+  <div class="mc">
+    <div style="font-size:3rem">🎉</div>
+    <h3>Happy hbd birthday!</h3>
+    <p>Semoga hadiah kecil dan ucapan sederhana ini bisa bikin hari spesialmu makin berkesan. ada hadiah sederhana ni maaf ya kalo kurang effort but walaupun hadiahnya sederhana tapi pemberiannya penuh makna. Hadiahnya ambil aja di jok motor wkwkwk ❤️</p>
+    <button class="btn" onclick="closeModal()">Terima Kasih Sayang 💕</button>
+  </div>
+</div>
+
+<script>
+const $=id=>document.getElementById(id);
+document.body.addEventListener('click',()=>{const b=$('bgm');if(b.paused)b.play().catch(()=>{})},{once:true});
+
+// elemen melayang di latar (hati, bunga, kupu-kupu, pita, balon, bintang, dll)
+const BG=[['♥','#ff6f9d'],['♥','#ff8fb3'],['♥','#ff6f9d'],['✿','#ff9ec4'],['❀','#ffb3cb'],['★','#ffd166'],['✦','#ffffff'],['🦋'],['🎀'],['🌸'],['🎈'],['🌷'],['🫧'],['🐾'],['🧸'],['✨']];
+for(let i=0;i<42;i++){const [g,c]=BG[Math.floor(Math.random()*BG.length)],h=document.createElement('span');
+  h.className='hb'+(Math.random()<.3?' fa':'');h.textContent=g;if(c)h.style.color=c;
+  h.style.cssText+=`left:${Math.random()*100}vw;font-size:${12+Math.random()*22}px;opacity:${.3+Math.random()*.45};filter:blur(${Math.random()<.3?1.5:0}px);animation-duration:${10+Math.random()*12}s,${3+Math.random()*3}s;animation-delay:-${Math.random()*16}s,-${Math.random()*4}s`;
+  $('hearts').appendChild(h)}
+// bintang berkelip
+for(let i=0;i<16;i++){const t=document.createElement('span');t.className='tw';t.textContent=i%3?'✦':'✧';
+  t.style.cssText=`left:${Math.random()*100}vw;top:${Math.random()*100}vh;font-size:${8+Math.random()*12}px;animation-delay:-${Math.random()*3}s;animation-duration:${1.8+Math.random()*2}s`;
+  $('hearts').appendChild(t)}
+
+// partikel (klik, kue, gelembung, kado)
+function burst(x,y,n=14,set=['⭐','💖','✨','🌸','♥']){for(let i=0;i<n;i++){const s=document.createElement('span');s.className='pt';s.textContent=set[i%set.length];
+  const a=Math.random()*6.28,r=50+Math.random()*120;
+  s.style.cssText=`left:${x}px;top:${y}px;--dx:${Math.cos(a)*r}px;--dy:${Math.sin(a)*r-40}px;font-size:${10+Math.random()*14}px`;
+  document.body.appendChild(s);setTimeout(()=>s.remove(),1200)}}
+document.addEventListener('pointerdown',e=>{burst(e.clientX,e.clientY,5,['✨','♥']);tick()});
+
+// sound effect (dibuat lewat kode, tanpa file tambahan)
+let AC;const ac=()=>{AC=AC||new(window.AudioContext||window.webkitAudioContext)();if(AC.state==='suspended')AC.resume();return AC};
+const NOTE=[784,880,988,1175,1319];
+function tick(){try{const c=ac(),t=c.currentTime,o=c.createOscillator(),g=c.createGain(),f=NOTE[Math.floor(Math.random()*5)];
+  o.type='sine';o.frequency.setValueAtTime(f,t);o.frequency.exponentialRampToValueAtTime(f*1.5,t+.08);
+  g.gain.setValueAtTime(.0001,t);g.gain.exponentialRampToValueAtTime(.15,t+.01);g.gain.exponentialRampToValueAtTime(.0001,t+.2);
+  o.connect(g);g.connect(c.destination);o.start(t);o.stop(t+.22)}catch(e){}}
+function blow(){try{const c=ac(),t=c.currentTime,L=1.8,b=c.createBuffer(1,c.sampleRate*L,c.sampleRate),d=b.getChannelData(0);
+  for(let i=0;i<d.length;i++)d[i]=Math.random()*2-1;
+  const s=c.createBufferSource();s.buffer=b;
+  const f=c.createBiquadFilter();f.type='bandpass';f.Q.value=.8;
+  f.frequency.setValueAtTime(500,t);f.frequency.linearRampToValueAtTime(1800,t+L*.6);f.frequency.linearRampToValueAtTime(900,t+L);
+  const g=c.createGain();g.gain.setValueAtTime(.0001,t);g.gain.exponentialRampToValueAtTime(.7,t+.25);g.gain.exponentialRampToValueAtTime(.0001,t+L);
+  s.connect(f);f.connect(g);g.connect(c.destination);s.start(t)}catch(e){}}
+
+// navigasi + indikator titik
+const D=$('dots');for(let i=0;i<6;i++)D.appendChild(document.createElement('i'));
+let cur=0;
+function go(n,e){if(e)e.stopPropagation();
+  const old=cur?$('stage-'+cur):null;cur=n;
+  [...D.children].forEach((d,i)=>d.classList.toggle('on',i+1===n));
+  const show=()=>{for(let i=1;i<=6;i++)$('stage-'+i).classList.toggle('hidden',i!==n);$('stage-'+n).classList.remove('out')};
+  if(old){old.classList.add('out');setTimeout(()=>{old.classList.remove('out');show()},350)}else show()}
+go(1);
+
+// 1. amplop
+function toggleEnv(){$('env').classList.add('open');$('eh').classList.add('hidden');$('ew').classList.remove('hidden')}
+// kalender November 2026 (1 Nov = Minggu), tanggal 10 disorot
+(function(){let h='';for(let d=1;d<=30;d++)h+=`<i class="${d%7==1?'su ':''}${d==10?'hl':''}">${d}</i>`;$('cg').innerHTML=h})();
+
+// 2. diary
+const LAGU='lagu.mp3'; // <-- ganti dengan nama file lagu kamu (taruh di folder yang sama)
+const song=new Audio(LAGU);song.loop=true;
+function playSong(){song.volume=0;song.play().then(()=>{$('bgm').pause();let v=0;const t=setInterval(()=>{v=Math.min(1,v+.05);song.volume=v;if(v>=1)clearInterval(t)},120)}).catch(()=>{})}
+function openBook(){if($('book').classList.contains('open'))return;
+  $('lock').textContent='🔓';$('book').style.setProperty('--sc',Math.min(1,(innerWidth-44)/640));fitPages();document.fonts&&document.fonts.ready.then(fitPages);$('book').classList.add('open');
+  $('dh').textContent='Buku rahasia telah terbuka... 📖';
+  setTimeout(()=>$('bn').classList.remove('hidden'),1500);
+  fireworks();playSong()}
+
+// 3. tumpukan foto (tarik / ketuk untuk melempar)
+const st=$('stack');let cards=[...st.children],sx,sy,drag=0;
+function lay(){cards.forEach((c,i)=>{c.style.transition='transform .55s cubic-bezier(.22,1,.36,1),opacity .4s';c.style.zIndex=cards.length-i;
+  c.style.transform=`translateY(${-i*6}px) rotate(${[-3,4,-6,5][i%4]}deg) scale(${1-i*.04})`;c.style.opacity=i<3?1:0})}
+lay();
+st.onpointerdown=e=>{drag=1;sx=e.clientX;sy=e.clientY;cards[0].style.transition='none';st.setPointerCapture(e.pointerId)};
+st.onpointermove=e=>{if(!drag)return;const dx=e.clientX-sx,dy=e.clientY-sy;cards[0].style.transform=`translate(${dx}px,${dy}px) rotate(${dx/12}deg)`};
+st.onpointerup=e=>{if(!drag)return;drag=0;const dx=e.clientX-sx,dy=e.clientY-sy,m=Math.hypot(dx,dy),c=cards[0];
+  if(m>6&&m<60)return lay();
+  const d=Math.sign(dx)||1;c.style.transition='transform .45s,opacity .45s';
+  c.style.transform=`translate(${d*320}px,${dy-40}px) rotate(${d*35}deg)`;c.style.opacity=0;
+  setTimeout(()=>{cards.push(cards.shift());lay()},420)};
+
+// 4. kue
+let done=0;
+function cut(v){if(done)return;const g=v>30?Math.min(12,(v-30)*.3):0;
+  $('cutl').style.transform=`scaleY(${Math.min(1,v/50)})`;
+  $('hl').style.transform=`translateX(${-g}px)`;$('hr').style.transform=`translateX(${g}px)`;
+  if(v>=95){done=1;blow();$('sl').disabled=true;$('cake').classList.add('done');
+    burst(innerWidth/2,innerHeight/2,40);
+    $('ct').textContent='Yummy! Buat permohonan...';$('ch').textContent='Lilinnya sudah padam ditiup cinta! 💕';
+    setTimeout(()=>go(5),2200)}}
+function rel(){if(done)return;const s=$('sl');(function b(){s.value=Math.max(0,s.value-4);cut(+s.value);if(s.value>0)requestAnimationFrame(b)})()}
+
+// 5. gelembung
+const W=[['Stay Healthy','Selalu sehat, panjang umur, & dijauhkan dari segala hal buruk yaa sayyanggkuu! 🌸','6%','8%'],
+['Stay Happy','Semoga harimu selalu dipenuhi tawa ceria dan senyum manismu! 😊','56%','4%'],
+['Dream Big','Semoga semua impian dan cita-citamu segera terwujud! 🌟','30%','36%'],
+['Be Successful','Semoga sukses dan dilancarkan dalam segala urusan! 🚀','58%','50%'],
+['Always Loved','Semoga kamu selalu merasa dicintai, dihargai, dan disayangi! 💗','5%','62%'],
+['Forever Us','Semoga kebersamaan kita selalu penuh kehangatan & kebahagiaan! 💑','45%','80%']];
+W.forEach((w,i)=>{const b=document.createElement('div');b.className='bb';b.textContent=w[0];
+  b.style.cssText=`left:${w[2]};top:${w[3]};animation-delay:-${i*.7}s`;
+  b.onclick=()=>{const r=b.getBoundingClientRect();burst(r.left+r.width/2,r.top+r.height/2,10,['♥','✨','🫧']);
+    b.classList.add('popped');$('wish').innerHTML='<small>✨ ❤️ ✨</small>'+w[1]};
+  $('bx').appendChild(b)});
+
+// 6. kado
+function openGift(){$('lid').classList.add('up');const r=$('gift').getBoundingClientRect();
+  burst(r.left+r.width/2,r.top+r.height/2,36);setTimeout(()=>$('modal').classList.remove('hidden'),800)}
+function closeModal(){$('modal').classList.add('hidden');$('lid').classList.remove('up')}
+
+// foto: cari akhiran file otomatis
+const EX=['.jpg','.jpeg','.png','.webp','.JPG','.PNG','.JPEG'];
+document.querySelectorAll('img[data-n]').forEach(im=>{let k=0;im.onerror=()=>{if(k<EX.length)im.src=im.dataset.n+EX[k++]};im.onerror()});
+
+// ukuran buku mengikuti tinggi layar
+function sz(){document.documentElement.style.setProperty('--H',Math.max(380,Math.min(480,innerHeight-215))+'px')}sz();addEventListener('resize',sz);
+// auto-fit: huruf diperkecil / teks dibagi ke 2 halaman agar selalu muat di dalam buku
+function fitPages(){
+  const L=document.querySelector('.cb'),R=document.querySelector('.pg'),lp=L.querySelector('p'),rp=R.querySelector('p');
+  if(!lp.dataset.a){lp.dataset.a=lp.textContent.trim();lp.dataset.b=rp.textContent.trim()}
+  const A=lp.dataset.a,B=lp.dataset.b,W=(A+' '+B).split(/\s+/),ov=e=>e.scrollHeight>e.clientHeight+1,ok=()=>!ov(L)&&!ov(R);
+  for(let fs=1.6;fs>=.85;fs-=.05){
+    L.style.fontSize=R.style.fontSize=fs+'rem';
+    lp.textContent=A;rp.textContent=B;
+    if(ok())return;
+    let lo=0,hi=W.length;
+    while(lo<hi){const m=Math.ceil((lo+hi)/2);lp.textContent=W.slice(0,m).join(' ');if(ov(L))hi=m-1;else lo=m}
+    lp.textContent=W.slice(0,lo).join(' ');rp.textContent=W.slice(lo).join(' ');
+    if(ok())return}}
+
+// kembang api
+const fc=$('fw'),fx=fc.getContext('2d');let P=[],R=[],run=0,pend=0;
+function fit(){fc.width=innerWidth;fc.height=innerHeight}fit();addEventListener('resize',fit);
+const PAL=[['#ff4d8d','#ffd1e3'],['#ffd166','#fff3c4'],['#c77dff','#f0d9ff'],['#5ee7ff','#d9faff'],['#ff9ec4','#ffffff'],['#7cffb2','#e3ffee'],['#ff7a45','#ffe0cf']];
+function launch(x){const c=PAL[Math.floor(Math.random()*PAL.length)];
+  R.push({x:x??innerWidth*(.12+Math.random()*.76),y:innerHeight,ty:innerHeight*(.12+Math.random()*.38),c,t:Math.floor(Math.random()*4)});
+  if(!run){run=1;loop()}}
+function fireworks(){
+  for(let i=0;i<26;i++){pend++;setTimeout(()=>{pend--;launch()},i*380+Math.random()*200)}
+  for(let i=0;i<8;i++){pend++;setTimeout(()=>{pend--;launch(innerWidth*(.1+i*.11))},10200+i*120)}}
+function boom(r){const n=r.t===1?60:r.t===2?70:110,sp=r.t===3?3.2:4.8;
+  for(let k=0;k<n;k++){let vx,vy;const a=k/n*6.283;
+    if(r.t===2){vx=16*Math.pow(Math.sin(a),3)*.3;vy=-(13*Math.cos(a)-5*Math.cos(2*a)-2*Math.cos(3*a)-Math.cos(4*a))*.3}
+    else if(r.t===1){vx=Math.cos(a)*sp;vy=Math.sin(a)*sp}
+    else{const s=(.3+Math.random()*.7)*sp*1.25,b=Math.random()*6.283;vx=Math.cos(b)*s;vy=Math.sin(b)*s}
+    P.push({x:r.x,y:r.y,vx,vy,l:1,d:r.t===3?.007:.011+Math.random()*.006,g:r.t===3?.06:.04,c:Math.random()<.35?r.c[1]:r.c[0],z:1.6+Math.random()*1.6})}}
+function loop(){
+  fx.globalCompositeOperation='destination-out';fx.fillStyle='rgba(0,0,0,.16)';fx.fillRect(0,0,fc.width,fc.height);
+  fx.globalCompositeOperation='lighter';
+  R=R.filter(r=>{r.y-=Math.max(5,(r.y-r.ty)*.07);fx.fillStyle=r.c[1];fx.fillRect(r.x-1.5,r.y,3,10);
+    P.push({x:r.x,y:r.y+10,vx:(Math.random()-.5)*.6,vy:Math.random()*1.2,l:.7,d:.05,g:0,c:r.c[0],z:1.5});
+    if(r.y-r.ty<6){boom(r);return false}return true});
+  P=P.filter(p=>{p.x+=p.vx;p.y+=p.vy;p.vx*=.984;p.vy=p.vy*.984+p.g;p.l-=p.d;if(p.l<=0)return false;
+    fx.globalAlpha=Math.min(1,p.l*(p.l<.4&&Math.random()<.4?.3:1.4));fx.fillStyle=p.c;fx.beginPath();fx.arc(p.x,p.y,p.z,0,6.283);fx.fill();return true});
+  fx.globalAlpha=1;
+  if(R.length||P.length||pend>0)requestAnimationFrame(loop);else{run=0;fx.clearRect(0,0,fc.width,fc.height)}}
+</script>
+</body>
+</html>
+ 
